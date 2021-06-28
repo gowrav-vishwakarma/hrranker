@@ -20,6 +20,10 @@ app.use(cookieParser());
 // app.use(express.static(path.join(__dirname, 'public')));
 // app.use(bodyParser.json());
 // app.use(bodyParser.urlencoded({ extended: true }));
+app.use(cors());
+
+var VnatkRouter = require('./routes/vnatk.js');
+app.use('/admin/vnatk', VnatkRouter);
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);

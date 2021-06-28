@@ -5,7 +5,7 @@ const vnatk = require('vnatk-express-sequelize');
 // Optional to use some auth middleware on this route
 //router.use(require('./middleware/adminTokenChecker'));
 
-const Models = require('../../models');
+const Models = require('../models');
 module.exports = vnatk({
     Models: Models,
     router: router,
